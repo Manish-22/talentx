@@ -23,7 +23,20 @@ class App extends Component {
     this.state = {
       route: 'signin',
       isSignedIn: false,
+      user: {
+        id: '',
+        name: '',
+        email: '',
+      }
     }
+  }
+
+  loadUser = (data) => {
+    this.setState({user: {
+      id: data.id,
+      name: data.name,
+      email: data.email
+    }})
   }
 
   onRouteChange = (route) => {
@@ -45,12 +58,12 @@ class App extends Component {
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
         {
         route === 'home'
-        ? <h1>Sucessfully logged in </h1>
+        ? <h1>Welcome {this.state.user.name}</h1>
         :
         (
           route === 'signin'
-          ? <Signin  onRouteChange={this.onRouteChange}/>
-          : <Register onRouteChange={this.onRouteChange}/>
+          ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
+          : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
         )   
         }   
       </div>
