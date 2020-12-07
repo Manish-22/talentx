@@ -1,0 +1,50 @@
+#text{
+    width: 50%;
+    border: 4px solid #aaa;
+    border-radius: 4px;
+    margin: 10px 0;
+    outline: none;
+    padding: 9px;
+    box-sizing:content-box;
+    transition: 0.3s;
+    box-shadow: 0 0 10px 0 rgb(10, 26, 43)
+    }
+
+    
+#button{
+    background-color: #9d9cd4; /* blue */
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 0 10px 0 rgb(10, 26, 43)
+}
+#header1{
+    color:rgb(14, 13, 12)
+}
+
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
+
+#para{
+    border: 10px solid gray;
+    padding: 100px;
+}
+  
+
+    
+      

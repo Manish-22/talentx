@@ -4,6 +4,7 @@ import Signin from './Components/Signin/Signin';
 import Register from './Components/Register/Register';
 import Particles from 'react-particles-js';
 import Navigation from './Components/Navigation/Navigation';
+import Navbar from './Components/Navbar/Navbar'
 
 const particlesOptions = {
   particles: {
@@ -58,7 +59,7 @@ class App extends Component {
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
         {
         route === 'home'
-        ? <h1>Welcome {this.state.user.name}</h1>
+        ? <Navbar/>
         :
         (
           route === 'signin'
